@@ -1,0 +1,13 @@
+vagrant box add --name "name" "path"
+
+vagrant init "name"
+
+vagrant up
+
+vagrant ssh
+
+vagrant exit
+
+vagrant box list
+
+vagrant box remove
