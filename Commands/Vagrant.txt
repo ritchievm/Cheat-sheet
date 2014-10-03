@@ -1,15 +1,13 @@
-vagrant box add --name "name" "path"
+vagrant box add --name "name" "path" :adds the box to vagrant
 
-vagrant init "name"
+vagrant up :runs the box
 
-vagrant up
+vagrant ssh :grants you acces to the box and allowes you to work with commands on that box
 
-vagrant ssh
+vagrant exit :exit the box
 
-vagrant exit
+vagrant box list :show list of boxes
 
-vagrant box list
+vagrant box remove :remove a certain box
 
-vagrant box remove
-
-vagrant ssh "srvname"
+vagrant ssh "srvname": open a certain running box
