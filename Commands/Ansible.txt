@@ -1,0 +1,9 @@
+For Windows
+
+Get skeleton
+
+Open Gitbash in the skeleton's location
+
+add box via vagrant(see vagrant commands)
+
+Up the box

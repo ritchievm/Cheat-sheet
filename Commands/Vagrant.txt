@@ -11,3 +11,5 @@ vagrant exit
 vagrant box list
 
 vagrant box remove
+
+vagrant ssh "srvname"
