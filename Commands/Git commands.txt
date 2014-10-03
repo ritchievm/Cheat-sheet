@@ -1,3 +1,11 @@
-Git add "filename"
-git commit -m(message)
-git push -u
+Git add "filename" : adds a file to the pile to push
+
+git commit -m(message) : commits the changes
+
+git push -u : pushes the commited changes to the repo
+
+git clone "adress" : clones an repo to your folder
+
+git pull : pulls changes from the repo to your folder
+
+get remote - v :list of remotes
