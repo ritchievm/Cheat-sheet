@@ -1,0 +1,12 @@
+Get list of precesses running:  ps aux | less
+
+Get list of services: service --status-all Or service --status-all | less
+
+get status of certain service: service "servicename" status
+
+Read logfile: tail "logpath" -20 (will return the last 20 lines from the logfile)
+
+Check apache syntax: httpd -t
+
+Check virtual definitions : httpd -S
+
