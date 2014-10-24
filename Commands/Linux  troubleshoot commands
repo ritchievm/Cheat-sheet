@@ -10,3 +10,5 @@ Check apache syntax: httpd -t
 
 Check virtual definitions : httpd -S
 
+check the SELinux status: sestatus
+
