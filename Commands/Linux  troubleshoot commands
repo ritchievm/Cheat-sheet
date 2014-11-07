@@ -12,3 +12,5 @@ Check virtual definitions : httpd -S
 
 check the SELinux status: sestatus
 
+Check logfile of a service: sudo journalctl -f -u named.service
+
