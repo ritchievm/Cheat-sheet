@@ -9,3 +9,11 @@ git clone "adress" : clones an repo to your folder
 git pull : pulls changes from the repo to your folder
 
 get remote - v :list of remotes
+
+git checkout -b "branchname" : create branch with the name "branchhname" vb feature/bind
+
+git checkout master : go back to the master branch
+
+git merge "branchname" : merge branch (branchname) with the master branch
+
+git rebase master : Have your branch(which you are in at that time) start of from a newer commit in the masterbranch
