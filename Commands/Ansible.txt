@@ -7,3 +7,5 @@ Open Gitbash in the skeleton's location
 add box via vagrant(see vagrant commands)
 
 Up the box
+
+Runnen bats install shizzle: sudo yum install dos2mix
