@@ -1,0 +1,29 @@
+Get logs: journalctl -f (show latest and wait for changes)
+
+get firewall state: firewall-cmd --state
+
+check status of service: sudo systemctl status SERVICENAME.service
+    smb(authent and file transf),nmb(provides netbios)
+
+add samba to firewall :firewall-cmd --permanent --zone=public --add-service=samba
+                      :firewall-cmd --reload
+                    
+Get samba config and edit: vim /etc/samba/smb.conf
+
+SEBooleans
+  -samba_export_all_ro (read only to all directies)
+  -samba_export_all_rw (read write to all directories)
+  -samba_enable_home_dirs
+  
+Check permissions for shared folder: ls -l  
+
+give permissions to user: chmod -R xxxx user/group
+give ownership chmod -R
+
+allow SELinux: chcon 
+
+
+
+
+
+sources: http://www.techbrown.com/samba-server-configuration-on-linux.html
