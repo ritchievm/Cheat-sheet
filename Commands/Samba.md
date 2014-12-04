@@ -39,5 +39,3 @@ get SElinux settings on a share: stat --format="%a/%U/%G/%C" "sharename"
 allow SELinux on share folder: chcon -R -t public_content_rw_t /srv/shares/
 
 get groups and their members: cat /etc/group
-
-sources: http://www.techbrown.com/samba-server-configuration-on-linux.html
