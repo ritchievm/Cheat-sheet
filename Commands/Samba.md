@@ -1,5 +1,5 @@
-Checklist:
-in advance:check wire connection virtual box
+###Checklist:
+0. in advance: Check wire connection virtual box
 
 1. check if needed packages are installed: yum info "packagename)
     - libsemanage-python, samba, samba-client, samba-common,(vsftpd for ftp)
