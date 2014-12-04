@@ -10,29 +10,27 @@ in advance:check wire connection virtual box
  - if not running: systemctl start name.service 
  
 4. check if samba is allowed through firewall: sudo firewall-cmd --list-all
- - if not allowed: firewall-cmd --permanent --zone=public -add-service=samba
- - and reload firewall firewall-cmd --reload
+    - if not allowed: firewall-cmd --permanent --zone=public -add-service=samba
+    - and reload firewall firewall-cmd --reload
  
 5. check the configuration files:vi or cat
     - Samba: etc/samba.smb.conf
     - ftp: etc/vsftpd/vsftpd.conf
     - If changes made restart service: systemctl restart smbd
-
+    
+6. check selinux booleans: getsebool -a |grep "boolname"
+    - if wrong value: setsebool "boolname" value
+    - SEBooleans
+        - samba_export_all_ro (read only to all directies)
+        - samba_export_all_rw (read write to all directories)
+        - smbd_anon_write
+        - samba_enable_home_dirs
+7. Check the persmissions for the shares
 
 Extra needed toolscommands/knowledge
 
 Get logs: journalctl -f (show latest and wait for changes)
 
-Get samba config and edit: vi /etc/samba/smb.conf
-Get status of seboolean: getsebool -a | grep "boolname"
-set status of seboolean: setsebool "boolname" on/off
-
-SEBooleans
-  -samba_export_all_ro (read only to all directies)
-  -samba_export_all_rw (read write to all directories)
-  -smbd_anon_write
-  -samba_enable_home_dirs
-  
 Check permissions for shared folder: ls -l  
 
 give permissions to user: chmod -R xxxx user/group
