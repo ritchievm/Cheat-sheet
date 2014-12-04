@@ -17,6 +17,7 @@ in advance:check wire connection virtual box
     - Samba: etc/samba.smb.conf
     - ftp: etc/vsftpd/vsftpd.conf
     - If changes made restart service: systemctl restart smbd
+    ![samba.conf example](https://github.com/ritchievm/Cheat-sheet/blob/master/Commands/samba.conf.png)
     
 6. check selinux booleans: getsebool -a |grep "boolname"
     - if wrong value: setsebool "boolname" value
