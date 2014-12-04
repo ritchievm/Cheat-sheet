@@ -31,11 +31,10 @@ Extra needed toolscommands/knowledge
 
 Get logs: journalctl -f (show latest and wait for changes)
 
-Check permissions for shared folder: ls -l  
-
 give permissions to user: chmod -R xxxx user/group
 give ownership chmod -R
 
+get SElinux settings on a share: stat --format="%a/%U/%G/%C" "sharename"
 allow SELinux on share folder: chcon -R -t public_content_rw_t /srv/shares/
 
 get groups and their members: cat /etc/group
