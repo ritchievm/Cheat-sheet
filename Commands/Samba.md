@@ -1,4 +1,4 @@
-###Checklist:
+###Checklist Van Mele Ritchie:
 0. in advance: Check wire connection virtual box
 
 1. check if needed packages are installed: yum info "packagename)
