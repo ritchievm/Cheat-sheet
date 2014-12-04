@@ -36,12 +36,8 @@ Check permissions for shared folder: ls -l
 give permissions to user: chmod -R xxxx user/group
 give ownership chmod -R
 
-allow SELinux: chcon -R -t public_content_rw_t
+allow SELinux on share folder: chcon -R -t public_content_rw_t /srv/shares/
 
-
-
-
-
-
+get groups and their members: cat /etc/group
 
 sources: http://www.techbrown.com/samba-server-configuration-on-linux.html
