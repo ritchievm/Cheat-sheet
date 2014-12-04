@@ -2,14 +2,16 @@ Checklist:
 in advance:check wire connection virtual box
 
 1. check if needed packages are installed: yum info "packagename)
-    - libsemanage-python, samba, samba-client, samba-common
+    - libsemanage-python, samba, samba-client, samba-common,(vsftpd for ftp)
+
 2. check if samba is running:  sudo systemctl status smb.service AND  sudo systemctl status nmb.service
 
 3. check if firewall is running: sudo firewall-cmd --state
  - if not running: systemctl start name.service 
  
 4. check if samba is allowed through firewall: sudo firewall-cmd --list-all
- - if not allowed: firewall-cmd --permanent -add-service=smb (and nmb)
+ - if not allowed: firewall-cmd --permanent --zone=public -add-service=samba
+ - and reload firewall firewall-cmd --reload
  
 5. check the configuration files:vi or cat
     - Samba: etc/samba.smb.conf
@@ -17,18 +19,10 @@ in advance:check wire connection virtual box
     - If changes made restart service: systemctl restart smbd
 
 
-
+Extra needed toolscommands/knowledge
 
 Get logs: journalctl -f (show latest and wait for changes)
 
-get firewall state: sudo firewall-cmd --state
-
-check status of service: sudo systemctl status SERVICENAME.service
-    smb(authent and file transf),nmb(provides netbios)
-
-add samba to firewall :firewall-cmd --permanent --zone=public --add-service=samba
-                      :firewall-cmd --reload
-                    
 Get samba config and edit: vi /etc/samba/smb.conf
 Get status of seboolean: getsebool -a | grep "boolname"
 set status of seboolean: setsebool "boolname" on/off
