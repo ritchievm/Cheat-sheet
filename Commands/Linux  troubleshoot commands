@@ -18,5 +18,5 @@ get interfaces: show interfaces
 
 check which dns is used: sudo cat etc/dhcp/dhcpd.conf
 
-
+get routing table: ip route
 
