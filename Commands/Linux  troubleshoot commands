@@ -14,3 +14,9 @@ check the SELinux status: sestatus
 
 Check logfile of a service: sudo journalctl -f -u named.service
 
+get interfaces: show interfaces
+
+check which dns is used: sudo cat etc/dhcp/dhcpd.conf
+
+
+
