@@ -1,3 +1,5 @@
+Angular Cheat Sheet
+
 Angular install: npm install -g @angular/cli
 
 new app: ng new appname 
