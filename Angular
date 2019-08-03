@@ -1,0 +1,14 @@
+Angular install: npm install -g @angular/cli
+
+new app: ng new appname 
+  --> No rounting and plain CSS
+
+run and compile: ng serve
+
+new component: ng generate component compname 
+  --> short ng g c compname
+
+add modules: npm install --save @angular/material .....
+  -->--save adds it tyo package.json as well. This way teammembers will get the correct libraries when pulling from Git.
+  
+  
